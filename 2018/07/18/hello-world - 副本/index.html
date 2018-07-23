@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="兵哥的技术博客">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ### 字">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-19T01:00:38.007Z">
+<meta property="og:updated_time" content="2018-07-23T00:46:26.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ### 字">
@@ -190,10 +190,54 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>set2<br>{‘b’, ‘c’, ‘a’}<br>遍历一下<br>set2={‘a’,’b’,’c’}<br>for item in set2:<br>    item<br>‘b’<br>‘c’<br>‘a’<br>5，集合运算<br>1）并集运算 (|)或union()<br>两个集合进行并集运算，即将两个集合中的元素都合并到一个新的集合中，重复的元素只出现一次。<br>例如：<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 | set2 =&gt; {‘jp’, ‘tw’, ‘fr’, ‘zh’, ‘en’}<br>或者<br>set1.union(set2)<br>2）交集运算 （&amp;）或intersection()<br>两个集合进行交集运算，即将两个集合中相同的元素合并到一个新的集合中。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 &amp; set2 =&gt; {‘en’}<br>或者<br>set1.intersection(set2)<br>3)差集运算（-）或difference()<br>两个集合进行差集运算，即运算符左边的集合，与运算右边的集合进行差运算，相当于使用左边集合去除与右边集合相同的元素。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 - set2 =&gt; {‘zh’, ‘tw’}<br>或者<br>set1.difference(set2)<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set2 - set1 =&gt; {‘jp’, ‘fr’}<br>或者<br>set2.difference(set1)<br>4)对称差运算（^）或者symmetric_difference()<br>两个集合进行对称差运算，即两个集合中除去相同元素，其他所有元素重新归并到一个新集合中。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set2 ^ set1 =&gt; {‘zh’, ‘tw’,’jp’, ‘fr’}<br>set1.symmetric_difference(set2)<br>5)子集与超集（父集）<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>subset =&gt; {‘zh’, ‘tw’}<br>我们通过观察可以看到，subset中的内容，属于set1的一部分。因此，<br>subset.issubset(set1) =&gt; True<br>表示，subset是set1集合的一个子集合<br>同理，我们也可以说，set1是subset的父集合<br>set1.issuperset(subset) =&gt; True<br>6、集合常用函数<br>1）update()<br>函数格式：set1.update(set2)<br>返回值：无<br>结果：我们将set2中的元素，添加到set1中，如果有相同的元素只保留一个。同时，该操作会修改set1的元素数量。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.update(set2)<br>set1 =&gt; {‘jp’, ‘tw’, ‘fr’, ‘zh’, ‘en’}<br>2)intersection_update()<br>函数格式：set1.intersection_update(set2)<br>返回值：无<br>结果：我们使用set2中的元素，添加到set1中，其中，保留两个集合中相同的元素。其中，set1、set2中其他的元素被舍弃。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.intersection_update(set2)<br>set1 =&gt; {‘en’}<br>3）symmetric_difference_update()<br>函数格式：symmetric_difference_update()<br>返回值：无<br>结果：我们使用set1与set2进行运算，只保留两者除去相同元素之外的元素。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.symmetric_difference_update(set2)<br>set1 =&gt; {‘jp’, ‘fr’, ‘zh’, ‘tw’}<br>‘’’</p>
+<p>set2<br>{‘b’, ‘c’, ‘a’}<br>遍历一下<br>set2={‘a’,’b’,’c’}<br>for item in set2:<br>    item<br>‘b’<br>‘c’<br>‘a’<br>5，集合运算<br>1）并集运算 (|)或union()<br>两个集合进行并集运算，即将两个集合中的元素都合并到一个新的集合中，重复的元素只出现一次。<br>例如：<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 | set2 =&gt; {‘jp’, ‘tw’, ‘fr’, ‘zh’, ‘en’}<br>或者<br>set1.union(set2)<br>2）交集运算 （&amp;）或intersection()<br>两个集合进行交集运算，即将两个集合中相同的元素合并到一个新的集合中。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 &amp; set2 =&gt; {‘en’}<br>或者<br>set1.intersection(set2)<br>3)差集运算（-）或difference()<br>两个集合进行差集运算，即运算符左边的集合，与运算右边的集合进行差运算，相当于使用左边集合去除与右边集合相同的元素。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1 - set2 =&gt; {‘zh’, ‘tw’}<br>或者<br>set1.difference(set2)<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set2 - set1 =&gt; {‘jp’, ‘fr’}<br>或者<br>set2.difference(set1)<br>4)对称差运算（^）或者symmetric_difference()<br>两个集合进行对称差运算，即两个集合中除去相同元素，其他所有元素重新归并到一个新集合中。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set2 ^ set1 =&gt; {‘zh’, ‘tw’,’jp’, ‘fr’}<br>set1.symmetric_difference(set2)<br>5)子集与超集（父集）<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>subset =&gt; {‘zh’, ‘tw’}<br>我们通过观察可以看到，subset中的内容，属于set1的一部分。因此，<br>subset.issubset(set1) =&gt; True<br>表示，subset是set1集合的一个子集合<br>同理，我们也可以说，set1是subset的父集合<br>set1.issuperset(subset) =&gt; True<br>6、集合常用函数<br>1）update()<br>函数格式：set1.update(set2)<br>返回值：无<br>结果：我们将set2中的元素，添加到set1中，如果有相同的元素只保留一个。同时，该操作会修改set1的元素数量。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.update(set2)<br>set1 =&gt; {‘jp’, ‘tw’, ‘fr’, ‘zh’, ‘en’}<br>2)intersection_update()<br>函数格式：set1.intersection_update(set2)<br>返回值：无<br>结果：我们使用set2中的元素，添加到set1中，其中，保留两个集合中相同的元素。其中，set1、set2中其他的元素被舍弃。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.intersection_update(set2)<br>set1 =&gt; {‘en’}<br>3）symmetric_difference_update()<br>函数格式：symmetric_difference_update()<br>返回值：无<br>结果：我们使用set1与set2进行运算，只保留两者除去相同元素之外的元素。<br>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>set2 =&gt; {‘jp’, ‘fr’, ‘en’}<br>set1.symmetric_difference_update(set2)<br>set1 =&gt; {‘jp’, ‘fr’, ‘zh’, ‘tw’}<br>高级特性<br>‘’’bash<br>一，range函数的延伸：<br>rang是自身不产出整数序列，它只有在调用的时候才产生序列<br>range(0,11)<br>range(0, 11)<br>list(range(0,10))<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>tuple(range(2,9,3))<br>(2, 5, 8)<br>二，列表的生成式<br>格式；[表达式或函数 for x in range（序列）]<br>含义；通过生成式中的循环，逐一产生x值，然后把x值带到表达式进行运算<br>[x<em>x for x in range(1,11)]<br>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]<br>双重for循环<br>[m+n for m in ‘ABC’for n in ‘XYZ’]<br>[‘AX’, ‘AY’, ‘AZ’, ‘BX’, ‘BY’, ‘BZ’, ‘CX’, ‘CY’, ‘CZ’]<br>[m</em>n for m in range(1,10,2) for n in range(2,11,2)]<br>[2, 4, 6, 8, 10, 6, 12, 18, 24, 30, 10, 20, 30, 40, 50, 14, 28, 42, 56, 70, 18, 36, 54, 72, 90]<br> 字典<br>{x:x<em>2 for x in range(1,11)}<br>{1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12, 7: 14, 8: 16, 9: 18, 10: 20}<br>{str(x):x</em>2 for x in range(1,11)}<br>{‘1’: 2, ‘2’: 4, ‘3’: 6, ‘4’: 8, ‘5’: 10, ‘6’: 12, ‘7’: 14, ‘8’: 16, ‘9’: 18, ‘10’: 20}<br>{‘000’+str(x) for x in range(1,6)}<br>{‘0003’, ‘0002’, ‘0001’, ‘0005’, ‘0004’}<br>{‘000’+str(x):chr(64+x) for x in range(1,6)}<br>{‘0001’: ‘A’, ‘0002’: ‘B’, ‘0003’: ‘C’, ‘0004’: ‘D’, ‘0005’: ‘E’}</p>
 </blockquote>
 </blockquote>
 </blockquote>
+<p>三，变量应先赋值才能在操作<br>比如</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a=list().append(‘one’)<br>print(a)<br>None<br>a=list()<br>a<br>[]<br>a.append(‘one’)<br>a<br>[‘one’]<br>切片加强；<br>列表切出来的是列表<br>字符串切出来是字符串<br>四，迭代器（iterator）<br>概念；迭代器访问元素，是从第一个开始，依次访问元素直到结束，<br>特性，只能往前不能后退<br>iter（）用来创建迭代器next（）访问下一个元素<br>ls=[1,2,3,4]<br>iter_list=iter(ls)#创建一个迭代器<br>iter_list=iter(ls)<br>print(iter_list)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>&lt;list_iterator object at 0x00000247EF221710&gt;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>next(iter_list)<br>1<br>next(iter_list)<br>2<br>next(iter_list)<br>3</p>
+<p>next(iter_list)<br>4<br>next(iter_list)<br>Traceback (most recent call last):<br>  File “&lt;pyshell#8&gt;”, line 1, in <module><br>    next(iter_list)<br>StopIteration</module></p>
+</blockquote>
+<p>2）ls=[1,2,3,4]<br> iter_ls=iter(ls)<br>for i in iter_ls:<br>    i<br>1<br>2<br>3<br>4<br>迭代器的延迟作用：迭代器生成的元素并不是迭代器在声明时，就准备好的，只有在我们需要<br>的时候迭代器才会产生相关元素，不需要时不会主动的生成相关元素，<br>迭代器实现了工厂模式的对象，它在你每次访问下一个值得时候给你返回。<br>字符串 列表 元组可以创建迭代器<br>可迭代化；标明相关的对象可以创建迭代器对象，同时他们自身都是可以for数据遍历的，<br>我们可以使用isinstance（）来判断对象是否为可迭代化<br>from collections import Iterable<br>string=’helo’<br>print(isinstance(string,Iterable))=&gt;True</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>isinstance(12,int)判断是什么类型<br>True<br>enumerate（）函数<br>函数格式；enumerate(iterable可迭代化)<br>返回值；生成一个枚举对象<br>五‘’生成器 没有返回值<br>生成器<br>1、创建方式<br>第一种，使用列表推导式，将[]改为()，生成一个generator对象<br>第二种，使用函数方式，采用yield关键字来实现<br>2、使用<br>生成器我们通常可以认为一种特殊的迭代器，但是它不需要像迭代器一样去实现<strong>iter</strong>,<strong>next</strong>方法。只需要使用yield关键字，该关键字可以在每次调用生成器函数时起到暂停作用，并将其值进行返回。同时还会记录当前运行值的状态。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>总结：迭代器和生成器<br>1、容器是一系列的元素集合，str、list、set、dict对象都可以看作是容器，容器都可以进行迭代（即用在while或for循环），凡是这样的容器我们都称为可迭代化对象（Iterable）。<br>2、函数将迭代化对象都实现了<strong>iter</strong>方法，该方法返回一个迭代器对象。<br>3、迭代器都拥有一个状态字段，用于记录下次迭代返回值。它实现了<strong>next</strong>和<strong>iter</strong>方法，迭代器不会一次性把所有的元素都加载到内存中，而是在需要的时候才生成返回结果。<br>4、生成器是一种特殊的迭代器，它的返回值不是通过return来返回的，而是通过yield来返回的。</p>
+<p>六，copy（）浅拷贝和deepcopy（）拷贝<br>1，浅拷贝；我们使用copy （）函数将列表中的元素，进行复制，<br>通常对于普通列表（一维的）实现完全的值</p>
+<p>七，sort（）与sorted（）<br>1，sort（）函数提供排序功能，同时实现永久排序，即会改变原有列表的元素位置<br>2，sorted（）函数提供排序功能，但是是临时的<br>def fib():川<br>    a, b=0, 1<br>    while True:<br>        yield<br>        a,b=b,a+b</p>
+<p>f=fib()</p>
+<p>ls=[next(f) for i in range(10)]<br>ls2=[next(f) for i in range(10)]<br>print(ls)<br>print(ls2)<br>‘’’<br>‘’’</p>
+<p>def getlist(n):<br>    result=[]<br>    for i in range(10):<br>        result.append(i)<br>    return result<br>for item in getlist(10):<br>    print(item,end=’ ‘)</p>
+<p>def iter_gene(n):<br>    for i in range(n):<br>        yield i</p>
+<p>for item in iter_gene(10):<br>    print(item,end=’ ‘)<br>‘’’<br>‘’’<br>def gene():<br>    no=1000<br>    while True:<br>        yield no<br>        no+=1<br>f=gene()<br>while True:<br>    custmer=input(‘请输入您的姓名’)<br>    print(‘患者姓名{0}，诊号{1}请到相关科室就诊’.format(custmer,next(f)))<br>‘’’<br>def gene(n):<br>    i=1000<br>    no=’1000’<br>    while True:<br>        if ‘A’==n:<br>            no =’A’+str(i)<br>            yield no<br>            i+=1<br>        elif ‘B’==n:<br>            no =’B’+str(i)<br>            yield no<br>            i+=1<br>        elif ‘c’==n:<br>            no =’c’+str(i)<br>            yield no<br>            i+=1<br>        else:<br>            pass<br>a=gene(‘A’)<br>b=gene(‘B’)<br>c=gene(‘c’)<br>while True:<br>    ke=input(‘请输入您的科室’)<br>    custmer=input(‘请输入您的姓名’)<br>    msg=’’<br>    if   ‘A’==ke:</p>
+<pre><code>    msg=(&apos;{0}你的科室{1}，就诊号为{2}&apos;.format(custmer,ke,next(a)))
+elif &apos;B&apos;==ke:
+
+    msg=(&apos;{0}你的科室{1}，就诊号为{2}&apos;.format(custmer,ke,next(b)))
+elif &apos;c&apos;==ke:
+
+    msg=(&apos;{0}你的科室{1}，就诊号为{2}&apos;.format(custmer,ke,next(c)))
+else:
+    msg=(&apos;输入有误&apos;)
+</code></pre><p>print(msg)</p>
+<p>‘’’</p>
 
       
 
