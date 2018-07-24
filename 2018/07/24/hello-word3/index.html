@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | 兵哥的技术博客</title>
+  <title>Hello World | 兵哥的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python、爬虫、Web开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="兵哥的技术博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ### 函">
+<meta name="keywords" content="Python、爬虫、Web开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/hello-word3/index.html">
 <meta property="og:site_name" content="兵哥的技术博客">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ### 函">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-24T07:33:53.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="兵哥的技术博客">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. ### 函">
   
     <link rel="alternative" href="/atom.xml" title="兵哥的技术博客" type="application/atom+xml">
   
@@ -151,103 +155,162 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hello-word3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/24/hello-word3/" class="archive-article-date">
+
+        
+        <a href="/2018/07/24/hello-word3/" class="archive-article-date">
   	<time datetime="2018-07-24T07:31:39.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/24/hello-word3/">Hello World</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>###</p>
+<h3 id="函数的基础"><a href="#函数的基础" class="headerlink" title="函数的基础"></a>函数的基础</h3><p><code>`</code> bash<br>函数<br>一，函数的定义<br>函数的格式：<br>def 函数名（[参数列表]）:</p>
+<pre><code>执行代码
+</code></pre><p>函数的命名方式与变量名的要求相同，<br>函数的参数：有俩个参数用，隔开<br>def name(name1):#name1为函数的参数<br>    print(‘我是{0}’.format(name1))<br>name(‘吕志兵’)</p>
+<p>def name(name1,age):#俩个参数<br>    print(‘我是{0}今年{1}’.format(name1,age))<br>name(‘吕志兵’,22)<br>二，函数的调用<br>函数在外部调用时，直接写函数名以及函数参数即可，不需要将函数体写出来，同时<br>函数是否有返回值，由函数体最后一句代码return决定<br>return函数必须放在最后的地方，否则后面的全部不执行，<br>def area(w,h):<br>    print(‘这是函数’)#这句执行<br>    return w<em>h<br>    print(‘这是函数’)这句不执行<br>a=area(8,9)<br>print(a)<br>三，参数不同写法<br>1）必须参数<br>我们在定义函数时，显示声明在函数的参数列表中的参数，这些参数一旦声明，函数<br>在调用时，必须声明的顺序，个数和数据类型，来传递实际的参数内容。<br>def area(name,age):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>area(‘tom’,55)<br>2）关键字参数<br>我们在定义函数声明时，声明了函数的参数后，在调用函数时我们不仅传递实际的参数内容<br>同时还将参数名字与之对应，这样保证传递进来的参数如果没有按照函数定义时的顺序，<br>也能传递过来。<br>def area(name,age):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>area(name=’tom’,age=55)<br>形参：<br>我们在定义函数时声明的参数：形式参数比如name和age<br>实参：<br>我们在调用函数时，根据形参的规定（顺序，类型，个数）传递的实际<br>的内容，实际的参数比如tom和55<br>3）默认参数<br>我们在定义函数时，声明函数的参数，同时可以给这些参数进行赋值，在调用该函数<br>时如果没有给对应参数传递实参，那么pytho会默认使用定义函数时所声明的默认参数<br>值<br>def area(name,age=66):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>a=area(‘tom’)#没有给实参打印默认<br>a=area(age=58,name=’tom’)<br>print(a)<br>我叫tom今年66<br>我叫tom今年58<br>4）可变参数：不定长参数<br>我们在定义参数时，因为参数过多或者不知道参数列表的个数，我们还可以采用可变<br>参数来实现，<br>注意可变参数为tuple元组类型<br>def goods(</em>summ):<br>    print(‘我是可变的’)<br>    for i in goods:<br>        print(i)<br>    print(type(summ))<br>goods()<br>goods(10)<br>goods(20,30)<br>关键字可变参数：我们在定义函数时，通过<strong>参数名，来表示0到n个参数，在外部调用函数以<br>字典形式显示<br>def names(name,age,</strong>kw):<br>    print(‘姓名{0}，年纪{1}，其他{2}’.format(name,age,kw))<br>a=names(‘tom’,12)<br>a=names(‘tom’,45,sex=’男’,address=’郑州’)<br>print(a)<br>姓名tom，年纪12，其他{}<br>姓名tom，年纪45，其他{‘sex’: ‘男’, ‘address’: ‘郑州’}<br>特殊用法<em><br>在函数定义中，如果单独使用一个</em>号，意味着<em>后面的参数，为关键字参数声明时必须使用<br>的名字<br>def names(name,age,</em>,sex,address):<br>    print(‘姓名{0}，年纪{1}，其他{2}{3}’.format(name,age,sex,address))<br>a=names(‘tom’,12,sex=’男’,address=’郑州’)<br>print(a)<br>姓名tom，年纪12，其他男郑州</p>
+<p>‘’’</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/24/hello-word3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/hello-world - 副本/" class="archive-article-date">
-  	<time datetime="2018-07-18T00:37:18.263Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/18/hello-world - 副本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/hello-world - 副本/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/09/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-09T12:36:28.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/09/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -270,8 +333,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -153,6 +153,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hello-word3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/hello-word3/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/24/hello-word3/" class="archive-article-date">
+  	<time datetime="2018-07-24T07:31:39.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>###</p>
+<h3 id="函数的基础"><a href="#函数的基础" class="headerlink" title="函数的基础"></a>函数的基础</h3><p><code>`</code> bash<br>函数<br>一，函数的定义<br>函数的格式：<br>def 函数名（[参数列表]）:</p>
+<pre><code>执行代码
+</code></pre><p>函数的命名方式与变量名的要求相同，<br>函数的参数：有俩个参数用，隔开<br>def name(name1):#name1为函数的参数<br>    print(‘我是{0}’.format(name1))<br>name(‘吕志兵’)</p>
+<p>def name(name1,age):#俩个参数<br>    print(‘我是{0}今年{1}’.format(name1,age))<br>name(‘吕志兵’,22)<br>二，函数的调用<br>函数在外部调用时，直接写函数名以及函数参数即可，不需要将函数体写出来，同时<br>函数是否有返回值，由函数体最后一句代码return决定<br>return函数必须放在最后的地方，否则后面的全部不执行，<br>def area(w,h):<br>    print(‘这是函数’)#这句执行<br>    return w<em>h<br>    print(‘这是函数’)这句不执行<br>a=area(8,9)<br>print(a)<br>三，参数不同写法<br>1）必须参数<br>我们在定义函数时，显示声明在函数的参数列表中的参数，这些参数一旦声明，函数<br>在调用时，必须声明的顺序，个数和数据类型，来传递实际的参数内容。<br>def area(name,age):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>area(‘tom’,55)<br>2）关键字参数<br>我们在定义函数声明时，声明了函数的参数后，在调用函数时我们不仅传递实际的参数内容<br>同时还将参数名字与之对应，这样保证传递进来的参数如果没有按照函数定义时的顺序，<br>也能传递过来。<br>def area(name,age):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>area(name=’tom’,age=55)<br>形参：<br>我们在定义函数时声明的参数：形式参数比如name和age<br>实参：<br>我们在调用函数时，根据形参的规定（顺序，类型，个数）传递的实际<br>的内容，实际的参数比如tom和55<br>3）默认参数<br>我们在定义函数时，声明函数的参数，同时可以给这些参数进行赋值，在调用该函数<br>时如果没有给对应参数传递实参，那么pytho会默认使用定义函数时所声明的默认参数<br>值<br>def area(name,age=66):<br>    print(‘我叫{0}今年{1}’.format(name,age))<br>a=area(‘tom’)#没有给实参打印默认<br>a=area(age=58,name=’tom’)<br>print(a)<br>我叫tom今年66<br>我叫tom今年58<br>4）可变参数：不定长参数<br>我们在定义参数时，因为参数过多或者不知道参数列表的个数，我们还可以采用可变<br>参数来实现，<br>注意可变参数为tuple元组类型<br>def goods(</em>summ):<br>    print(‘我是可变的’)<br>    for i in goods:<br>        print(i)<br>    print(type(summ))<br>goods()<br>goods(10)<br>goods(20,30)<br>关键字可变参数：我们在定义函数时，通过<strong>参数名，来表示0到n个参数，在外部调用函数以<br>字典形式显示<br>def names(name,age,</strong>kw):<br>    print(‘姓名{0}，年纪{1}，其他{2}’.format(name,age,kw))<br>a=names(‘tom’,12)<br>a=names(‘tom’,45,sex=’男’,address=’郑州’)<br>print(a)<br>姓名tom，年纪12，其他{}<br>姓名tom，年纪45，其他{‘sex’: ‘男’, ‘address’: ‘郑州’}<br>特殊用法<em><br>在函数定义中，如果单独使用一个</em>号，意味着<em>后面的参数，为关键字参数声明时必须使用<br>的名字<br>def names(name,age,</em>,sex,address):<br>    print(‘姓名{0}，年纪{1}，其他{2}{3}’.format(name,age,sex,address))<br>a=names(‘tom’,12,sex=’男’,address=’郑州’)<br>print(a)<br>姓名tom，年纪12，其他男郑州</p>
+<p>‘’’</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/hello-word3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world - 副本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
