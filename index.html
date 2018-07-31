@@ -213,6 +213,51 @@
 </blockquote>
 </blockquote>
 </blockquote>
+<p>####python的输入和输出I/O<br>‘’’bash<br>10，I/O文件输入和输出<br>1）格式化函数<br>repr函数;<br>函数格式：repr（object）<br>返回值：返回一个字符串类型的数据<br>说明:该函数，将参数的对象进行处理，变成字符串类型，其中如果参数为字符串仍然会在<br>外部加：“ ”，</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>repr(‘i am tom’)<br>“‘i am tom’”<br>repr(“i am tom”)<br>“‘i am tom’”</p>
+<p>repr((1,2,3))<br>‘(1, 2, 3)’<br>居左居右居中函数：<br>rjust（）/l ljust（）/center()<br>函数格式：str.ljust(int)/str.rjust/str.center<br>返回值：无</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>for i in range(1,13):<br>    print(‘{0:3d} {1:4d} {2:6d}’.format(i,i<em>i,i</em>i*i))<br>print(‘我是{name}’.format(name=’吕志兵’))<br>我是吕志兵</p>
+</blockquote>
+<p>  1    1      1<br>  2    4      8<br>  3    9     27<br>  4   16     64<br>  5   25    125<br>  6   36    216<br>  7   49    343<br>  8   64    512<br>  9   81    729<br> 10  100   1000<br> 11  121   1331<br> 12  144   1728</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<p>1）文本文件的输入和输出<br>文本文件的操作步骤<br>1，打开文件<br>函数格式：open（file，mode，buffering）<br>返回值：返回一个文件对象，用来对文件进行操作。<br>说明：该函数主要是进行文件打开操作，如果文件不存在就新建一个文件。如果存在<br>就打开原有文件<br>2,操作文件<br>1）写文件<br>函数格式：write（str）<br>返回值：返回所写入文件的字符串中的字符数<br>说明：可以一次写入一个字符串内容，到文件中，每次写入文件是，如果使用的模式为w，<br>那么因为着本次写入为覆盖式写入，即写入内容会替换掉原有文件内容。<br>file=open(‘name.txt’,’w’)<br>a=file.write(‘吕志兵’)<br>print(a)<br>a=3<br>函数格式：writelines（str）<br>返回值：无<br>说明：该函数可以使用列表，字符串，元组，集合字典等作为参数，其中这些序列中的元素<br>必须为字符串类型，同时也可以一次性写入多行字符串</p>
+</blockquote>
+</blockquote>
+<p>#string=’’’hjfudhfusdhfjsdhfjsdhfhsdj</p>
+<p>#解放军第四福建地税附近开房坚实的</p>
+<p>#fdfggfsgsdffgds’’’</p>
+<pre><code># li=[&apos;lv&apos;,&apos;zhi&apos;,&apos;kang&apos;]
+</code></pre><p>#file=open(‘name.txt’,’w’)</p>
+<p>#file.writelines(string)或（li）</p>
+<p> 输出结果；hjfudhfusdhfjsdhfjsdhfhsdj</p>
+<p>#解放军第四福建地税附近开房坚实的</p>
+<p>#fdfggfsgsdffgds<br>加为a+<br>string=’奋斗开始’<br>file=open(‘name.txt’,’a+’,encoding=’UTF-8’)<br>file.writelines(string)</p>
+<p>2）读文件<br>函数格式：read([size])<br>返回值：返回按字节逐一读取的数据。<br>说明该函数按照字节个数，逐一读取文件中的数据。如果没有规定读取数据的字节大小<br>即size，一直读完文件中的全部数据，如果规定了数据的字节大小。只读规定字节的内<br>函数格式：readline()<br>返回值;返回读取的一行字符串】<br>说明改函数一次能读取文件中一行内容，如果读取全部内容，需要配合while循环使用<br>注意使用读取到的文件内容作为条件判断，即文件内容为空字符串时推出<br>函数格式：readlines()<br>返回值：返回一个包含字符串的列表、<br>说明<br>string=’奋斗开始’<br>file=open(‘name.txt’,’r’,encoding=’UTF-8’)<br>a=file.readlines()<br>print(a)<br>3、关闭文件<br>函数格式：close()<br>返回值：无<br>说明：当我们操作文件时，进行相关的写入操作，Python将数据写入文件之前，会将文件保存在文件缓冲区中，在我们调用close()函数时，<br>首先会将文件缓冲区内还没有写入到文件中的数据进行刷新并强制写入文件，然后关闭Python与文件的通道，释放相关资源。<br>4，json格式处理<br>在python中，提供了json模块可以实现对特殊数据结构的读写。比如列表和字典<br>1）将嵌套列表或字典转为json格式数据<br>import json<br>a=json.dumps(列表或字典)<br>一，嵌套列表<br>import json<br>list1=[[‘1’,’2’],[‘a’,’b’]]<br>file=open(‘name.txt’,’r’,encoding=’UTF-8’)<br>a=json.dumps(list1)</p>
+<p>#file.writelines(a)<br>li=json.load(file)<br>print(li[1])<br>二。嵌套字典<br>import json<br>dict1={‘1’:{‘1’:’a’},’2’:{2:’b’}}<br>file=open(‘name.txt’,’r’,encoding=’UTF-8’)<br>a=json.dumps(dict1)=#json.dumps(dict1,file)</p>
+<p>#file.writelines(a)<br>li=json.load(file)<br>print(li)<br>print(li[‘1’])<br>file.close()<br>PS E:\pythoncode&gt; &amp; python e:/pythoncode/lesson9.py<br>{‘1’: {‘1’: ‘a’}, ‘2’: {‘2’: ‘b’}}<br>{‘1’: ‘a’}</p>
+<p>file.close()<br>五，文件及路径操作函数<br>from os import path<br>if path.isfile(‘name.txt’):<br>    print(‘该文件已有’)<br>else:<br>    print(‘没有’)<br>1）isfile（）与isdir（）(os.path模块)<br>函数格式：isfile（file）<br>返回值：bool<br>说明：根据传入的参数文件类型<br>isdir（）<br>函数格式;isdir(path)<br>返回值;bool<br>说明：内容是不是目录类型<br>2）创建路径mkdir（）    删除路径removedirs（）<br>函数格式mkdir（path）os.mkdir()<br>返回值：无<br>说明：如果指定路径中不存在该目录，那么创建该目录。注意如果存在同名目录，则报错<br>函数格式：removedirs（path）<br>返回值:无<br>说明：删除指定目录，如果该目录有内容。不允许删除。否则报错<br>import os</p>
+<p>#os.mkdir(‘ect’)<br>os.removedirs(‘ect’)<br>3）删除文件;remove（file）（os模块）os.remove()<br>返回值：无<br>说明;<br>4)判断文件/目录是否存在exists（）<br>函数格式;os.path.exists(file/path)<br>返回值：bool<br>‘’’</p>
+<p>‘’’bash<br>正文：：：</p>
+<p>10、文件输入输出（IO）<br>1）格式化函数<br>repr()<br>函数格式：repr(Object)<br>返回值：返回一个字符串类型的数据<br>说明：该函数，将参数中的对象进行处理，变为字符串类型，其中如果参数为字符串仍然会在外部加上“”，其内部的字符串的边界符仍然存在。例如：<br>repr(‘hello world’)<br>“‘hello world’”<br>居左、居右、居中函数<br>rjust()/ljust()/center()<br>函数格式：rjust(int) /ljust(int)/center()<br>返回值：无<br>说明：该函数，将输出的字符串居右(居左/居中)对其，左侧(右侧/两侧)使用参数中规定的空格数来对齐<br>2）文本文件的输入输出<br>文本文件的操作步骤：<br>1、打开文件<br>函数格式：open(file,mode,buffering,encoding)<br>返回值：返回一个文件对象，用来对文件进行操作。<br>说明：该函数主要是进行文件打开操作，如果文件不存在就新建一个文件。如果存在就打开原有文件。<br>2、操作文件<br>1）写文件<br>函数格式：write(str)<br>返回值：返回所写入文件的字符串中的字符数。<br>说明：该函数可以一次性写入一个字符串内容，到文件中。每次写入文件是，如果使用的模式为w，那么因为着本次写入为覆盖式写入，即写入内容会替换掉原有文件内容。<br>函数格式：writelines(sequence)<br>返回值：无<br>说明：该函数可以使用列表、字符串、元组、集合、字典等作为参数，其中这些序列中的元素必须为字符串类型，同时也可以一次性写入多行字符串。<br>2）读文件<br>函数格式：read([size])<br>返回值：返回按字节逐一读取的数据。<br>说明：该函数按照字节个数，逐一读取文件中的数据。如果没有规定读取数据的字节大小即size，一直读完文件中全部数据，如果规定了数据的字节大小，只读取规定字节数的内容。</p>
+<p>函数格式：readline()<br>返回值：返回读取的一行字符串<br>说明：该函数一次能够读取文件中一行内容，如果需要读取全部内容，需要配合while循环使用，注意使用读取到的文件内容作为条件判断，即文件内容为空字符串时，退出循环。</p>
+<p>函数格式：readlines()<br>返回值：返回一个包含多个字符串的列表。<br>说明：该函数能够一次性将文件中的数据全部读取出来，然后将文件中每行字符串，作为一个列表的元素，将其组装成一个列表返回。</p>
+<p>3、关闭文件<br>函数格式：close()<br>返回值：无<br>说明：当我们操作文件时，进行相关的写入操作，Python将数据写入文件之前，会将文件保存在文件缓冲区中，在我们调用close()函数时，首先会将文件缓冲区内还没有写入到文件中的数据进行刷新并强制写入文件，然后关闭Python与文件的通道，释放相关资源。</p>
+<p>4、json格式处理<br>在Python中，提供了json模块可以实现对特殊数据结构的读写。比如：列表和字典。<br>1）将嵌套列表或字典转为json格式数据<br>import json<br>item = json.dumps(list/dict)<br>file.writelines(item)</p>
+<p>json.dump(list, file)<br>2)将文件中的列表或字典json字符串读取出来<br>f= open(file,mode)<br>json.load(f)</p>
+<p>5、文件及路径操作函数<br>1）isfile()与isdir() （os.path模块）<br>函数格式：os.path.isfile(file)<br>返回值：bool<br>说明：根据传入的参数，判断该内容是否为文件类型。如果是文件类型返回True，如果不是返回False<br>isdir()<br>函数格式：os.path.isdir(path)<br>返回值：bool<br>说明：根据传入的参数，判断内容是否为目录类型，如果是目录就返回True，如果不是返回False<br>2）创建路径 mkdir()、删除路径removedirs() (os模块)<br>函数格式：os.mkdir(path)<br>返回值：无<br>说明：如果指定路径中不存在该目录，那么创建该目录。注意，如果存在同名目录，则报错</p>
+<p>函数格式：os.removedirs(path)，os.rmdir(path)<br>返回值：无<br>说明：删除指定的目录，如果该目录中存在文件或子目录，都不允许删除。否则报错。<br>3）删除文件 remove() （os模块）<br>函数格式：os.remove(file)<br>返回值：无<br>说明：删除指定的文件，如果该文件不存在则报错。如果文件存在就删除。<br>4）判断文件/目录是否存在 exists()<br>函数格式：os.path.exists(file/path)<br>返回值：bool<br>说明：判断指定的文件或路径是否存在，如果存在返回True，如果不存在返回False。<br>5)返回指定路径下，所有子路径 listdir()<br>函数格式：os.listdir(path)<br>返回值：list<br>说明：返回指定路径下，所有的子路径。<br>6）返回当前路径 getcwd()<br>函数格式：os.getcwd()<br>返回值：path<br>说明：返回当前程序所在的绝对路径<br>7）返回文件大小 getsize()<br>函数格式：path.getsize()<br>返回值：int<br>说明：返回指定文件的大小，单位是字节<br>8）重命名 rename()<br>函数格式：os.rename(oldfilename/oldpath,newfilename/newpath)<br>返回值：无<br>说明:将指定的文件名或目录名进行重命名。<br>9）替换 replace()<br>函数格式：os.replace(src,dst)<br>返回值：无<br>说明：使用目标文件替换掉原文件</p>
+<p>注意：在Python3.x版本中，将pathlib作为内置模块进行了引入。我们可以通过使用from pathlib import Path，使用。<br>其使用的前提为：需要先创建一个path对象，然后对其进行操作。<br>p = Path(‘c:\pythoncode\etc’)<br>具体方法，大家自行学习。</p>
+<p>‘’</p>
 
       
 
